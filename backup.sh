@@ -1,4 +1,11 @@
 #!/bin/bash
+
+echo #######################################'date +%Y%m%d_%H-%M##############################
+echo ###										#####
+echo ###                                                                                #####
+echo ###                                          Running                               #####
+echo ###                                                                                #####
+echo ###										#####
 END=`docker ps --format "{{.Names}}"  | wc -l`
 for (( i=1; i<=$END; i++ ))
 do
@@ -14,3 +21,9 @@ do
 done
 find ~ -name "*-backup-*.tar" -mtime +7 -exec rm -rf {} \;
 
+echo ###                                                                               ######
+echo ###                                                                                #####
+echo ###                                                                                #####
+echo ###                                          End	                                #####
+echo ###                                                                                #####
+echo ########################################################################################
